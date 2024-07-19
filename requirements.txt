@@ -1,0 +1,9 @@
+# local package
+-e .
+
+# external requirements
+click
+coverage
+black
+python-dotenv>=0.5.1
+

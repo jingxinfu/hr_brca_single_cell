@@ -1,0 +1,12 @@
+name: scpipe_v4
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python==3.8.12
+  - ipykernel
+  - pip
+  - r-essentials==4.1
+  - r-devtools
+  - r-remotes
+  - r-biocmanager
