@@ -164,6 +164,7 @@ def aggregate_heatmap(adata:anndata.AnnData,
     ## plot
     plt.rcParams['font.family']='DejaVu Sans'
     plt.rcParams['font.size'] = 7
+    plt.rcParams['axes.grid'] = False 
     plt.figure(figsize=figsize,dpi=150)
 
 
