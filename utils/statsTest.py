@@ -13,7 +13,7 @@ def lmTest(dt:pd.DataFrame,Y:List[str],x:str,random_var:str,Z:List[str],explored
     for y in Y:
         reg = smf.mixedlm(f"{y}~0+{x}+{'+'.join(Z)}".strip('+'),data=data,groups=data[random_var]).fit()
         coef = reg.params[f'{x}[{l1}]'] - reg.params[f'{x}[{l0}]']
-        logfc =  np.log2( data.loc[data[x]==l1,y].mean() / data.loc[data[x]==l0,y].mean())
+        logfc =  np.log2( data.loc[data[x]==l1,:].groupby(random_var)[y].mean().mean() / data.loc[data[x]==l0,:].groupby(random_var)[y].mean().mean())
         ## set params other than compared two coefs to 0
         ## since there is an additional params 'random_var', the we should subtract 3 other than 2
         # pvalue = reg.t_test(np.array([[-1,1]+[0]*(reg.params.size-3)])).pvalue

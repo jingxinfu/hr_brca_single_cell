@@ -158,18 +158,7 @@ COLOR_PAlETTE = {
         'Tumor.Cell_Cycle':'purple',
         'Tumor.Stress':'peru','Tumor.Apelin':'slategray',
         
-        ## Leiden
-        'Macs.APOE High':"#7209b7",'Macs.HDAC9 High':"#4a4e69",'Macs.PLCG2 High':"#9a8c98",'Macs.ZNF331 High':"#c9ada7",
-        'CD8T.em.GZMK+':"#faf0ca", 'CD8T.ex.TCF7+':'#f4d35e','CD8T.m.IL7R High':"#ee964b", 'CD8T.m.FTL High':"#f95738",
-        'CAF.Inf':'#678d58','CAF.MHCI High':'#74d3ae','CAF.Myo':'#a6c48a',
-        'Endo.ACKR1+':'#a68a64','Endo.CXCL12+':'#d6ccc2','Endo.MHCII High':'#7f4f24', 'Endo.PRKG1+':'#582f0e',
         ## MetaPrograms
-        'Macs.Lipid-IGF1':'purple',
-        'Macs.Cholinergic':'red',
-        'Macs.Adipogenesis':'green',
-        'Macs.MHCII':'steelblue',
-        'Macs.Lipid-APOE':'black',
-        'Macs.Interferon':'darkorange',
         
         'Macs.Lipid':'purple',
         'Macs.Adhesion':'gray',
@@ -177,8 +166,8 @@ COLOR_PAlETTE = {
         'Macs.Presentation':'steelblue',
         'Macs.Secretion':'gold',
         
-        'CD8T.Cytotoxic':'#faf0ca',
-        'CD8T.Dysfunction':'#f4d35e',
+        'CD8T.Cytotoxic':'orange',
+        'CD8T.Exhausted':'olive',
         'CD8T.Naive':'steelblue',
         
         'Endo.Allograft_Rejection':'#7f4f24',
