@@ -159,16 +159,17 @@ COLOR_PAlETTE = {
         'Tumor.Stress':'peru','Tumor.Apelin':'slategray',
         
         ## MetaPrograms
-        
+
         'Macs.Lipid':'purple',
+        'Macs.Interferon':'#78290f',
         'Macs.Adhesion':'gray',
         'Macs.Endocytosis':'green',
         'Macs.Presentation':'steelblue',
         'Macs.Secretion':'gold',
         
-        'CD8T.Cytotoxic':'orange',
-        'CD8T.Exhausted':'olive',
-        'CD8T.Naive':'steelblue',
+        'CD8T.Cytotoxic':'#ffd166',
+        'CD8T.Exhausted':'#ef476f',
+        'CD8T.Naive':'#06d6a0',
         
         'Endo.Allograft_Rejection':'#7f4f24',
         'Endo.Endo1':'#a68a64',

@@ -1,8 +1,6 @@
-GEX_Cohort='GEX_CCG1112_LowMt'
-REPO = './'
-WORKFLOW_DATA = f'{REPO}/data/workflow'
-Manuscript_RESULT = f'{REPO}/data/result/manuscript_table/'
-
+REPO = '..'
+RESULT_TABLE = f'{REPO}/data/table'
+RESULT_OBJ = f'{REPO}/data/object'
 
 import numpy as np
 import pandas as pd
@@ -15,27 +13,29 @@ sys.path.append(REPO)
 from utils.misc import oneToRestDEGs,get_signature_matrix
 
 # Define Paramters
-obs_path = f"{Manuscript_RESULT}/GEX_OBS.csv"
+obs_path = f"{RESULT_TABLE}/GEX_OBS_Lineage.csv"
 obs = pd.read_csv(obs_path,index_col=0)
-adata = sc.read(f'{WORKFLOW_DATA}/{GEX_Cohort}/gex_qc.h5ad')
+adata = sc.read(f'{RESULT_OBJ}/gex_all.h5ad')
 # keep cells with annotation
 adata = adata[obs.index,:]
+# add clinical information
+sample_meta =  pd.read_excel(f'{RESULT_TABLE}/Supplementary Table 1.xlsx',index_col=0).replace(np.nan,'N/A')
+
 # append meta information to the adata.obs data frame
-for c in ['Cellstate','Celltype','BestResponse','Patient','Timepoint','Sample_Short','Treatment_Arm','RCB']:
-    adata.obs[c] = obs.loc[adata.obs.index,c]
+adata.obs = adata.obs.reset_index().merge(sample_meta,left_on='Sample',right_on='CCG_ID',how='left').set_index('index')
 
 ## Generate pseudo-bulk
 adata.layers['counts']=adata.X
 pdata = dc.get_pseudobulk(
     adata,
-    sample_col='Sample_Short',
+    sample_col='CCG_ID',
     groups_col='Cellstate',
     layer='counts',
     mode='sum',
     min_cells=10, # remove samples with some cell states less than 10 cells -> from decoupler document
     min_counts=1000 # remove samples with some cell states less than 1000 accumulated counts
 )
-pdata.write(f"{Manuscript_RESULT}/pseudobulk.h5ad")
+pdata.write(f"{RESULT_OBJ}/pseudobulk.h5ad")
 
 ######################## DEGs per cellstates #####################
 results = oneToRestDEGs(pdata=pdata,
