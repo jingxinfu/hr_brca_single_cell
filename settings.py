@@ -52,6 +52,14 @@ import palettable
 
 VIVID_10 = palettable.cartocolors.qualitative.Vivid_10.mpl_colors
 COLOR_PAlETTE = {
+    "BluePrint": {
+        'Normal': 'steelblue',
+        'Basal': 'orange',
+        'LumB': 'yellow',
+        'LumA': 'lightgreen',
+        'Her2': 'purple',
+    },
+    
     'Treatment_Arm': {"Chemo->Combo": '#8d99ae', "ICI->Combo": "#fed9b7"},
     'RCB': {
         0: '#006d77',
