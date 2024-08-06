@@ -74,13 +74,19 @@ COLOR_PAlETTE = {
     },
     'BestResponse': {'favorable response\n(RCB 0-I)': '#006d77',
                      'unfavorable response\n(RCB II-III)': '#e29578'},
-    'Timepoint': {
+   'Timepoint': {
         'Baseline': "#352208",
         "W3D1": "#E1BB80",
         "W7D1": "#6c8152",
-        "Surg+AC": "#685634",
-        "AfterSurg": "#806443",
+        # "Surg+AC": "#685634",
+        # "AfterSurg": "#806443",
+        "Pre-surgery": "#685634",
+        "Surgery": "#806443",
         "EOT?": "gray",
+    },
+    'AC_Treatment':{
+        'Yes':'black',
+        'No':'white'
     },
     'Tech':{"5' v2 gene expression":'skyblue','Multiome ATAC + Gene Expression':'steelblue'},
     'Copy number alteration':{
