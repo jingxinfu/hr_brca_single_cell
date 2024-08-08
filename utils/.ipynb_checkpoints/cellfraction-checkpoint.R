@@ -89,9 +89,9 @@ main <- function(args) {
      
     
     # MuSiC estimation
-    # print("Run MuSiC...")
-    # prop <- music_estimation(sc.sce, exprs(bulk.eset), args$celltype, args$sample)
-    # write.csv(prop, file = paste0(args$output, "_MuSiC_Fraction_Estimation.csv"), quote = FALSE)
+    #print("Run MuSiC...")
+    #prop <- music_estimation(sc.sce, exprs(bulk.eset), args$celltype, args$sample)
+    #write.csv(prop, file = paste0(args$output, "_MuSiC_Fraction_Estimation.csv"), quote = FALSE)
 
     # Bseq-QC estimation, no document available
     # print("Run Bseq-QC...")
@@ -118,7 +118,7 @@ if (!interactive()) {
             bulkTsv = file.path(base_dir, cohort,"CPM.tsv"),
             celltype = 'Celltype',
             sample ='Sample_Short',
-            output = file.path(base_dir,cohort,"Cellstate")
+            output = file.path(base_dir,cohort,"Celltype")
         )
         print(args)
         main(args = args)
