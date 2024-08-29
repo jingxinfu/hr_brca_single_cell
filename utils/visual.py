@@ -148,6 +148,7 @@ def aggregate_heatmap(adata:anndata.AnnData,
                       features:Union[list,pd.DataFrame],
                       palette:dict,
                       top_anno_columns:List[str],
+                      output_path:Union[str,None]=None,
                       col_split:Union[str,None]=None,
                       row_split:Union[str,None]=None,
                       standard_normalization:bool=True,
@@ -244,6 +245,8 @@ def aggregate_heatmap(adata:anndata.AnnData,
                            label=cbar_label, 
                            cmap=cmap,
                            **kwargs)
+    if output_path is not None:
+        plt.savefig(output_path, bbox_inches='tight',dpi=200)
 
 def small_sample_box_visual(dt:pd.DataFrame,x:str,y:str,palette:Dict[str,str],ax:Union[None,matplotlib.axes.Axes]=None,**kwargs):
     if ax is None:
