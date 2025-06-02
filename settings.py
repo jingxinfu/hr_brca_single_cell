@@ -184,32 +184,54 @@ COLOR_PAlETTE = {
         'CD8T.Cytotoxic':'#ffd166',
         'CD8T.Exhausted':'#ef476f',
         'CD8T.Naive':'#06d6a0',
+
+
+
+    "Endothelial.HEV": "tab:blue",
+    "Endothelial.Notch-signaling": "tab:orange",
+    "Endothelial.EMT-I": "tab:green",
+    "Endothelial.Adipogenesis-I": "tab:red",
+    "Endothelial.Hypoxia": "tab:purple",
+    "Endothelial.EMT-II": "tab:brown",
+    "Endothelial.EBV": "tab:pink",
+    "Endothelial.Adipogenesis-II": "tab:gray",
+
+        # 'Endo.Allograft_Rejection':'#7f4f24',
+        # 'Endo.Endo1':'#a68a64',
+        # 'Endo.Endo2':'#d6ccc2',
+        # 'Endo.Endo5':'#582f0e',
+        # 'Endo.HEV1':'salmon',
+        # 'Endo.Notch-signaling':'black',
         
-        'Endo.Allograft_Rejection':'#7f4f24',
-        'Endo.Endo1':'#a68a64',
-        'Endo.Endo2':'#d6ccc2',
-        'Endo.Endo5':'#582f0e',
-        'Endo.HEV1':'salmon',
-        'Endo.Notch-signaling':'black',
-        
-        'Endothelial.Allograft_Rejection':'#7f4f24',
-        'Endothelial.Endo1':'#a68a64',
-        'Endothelial.Endo2':'#d6ccc2',
-        'Endothelial.Endo5':'#582f0e',
-        'Endothelial.HEV1':'salmon',
-        'Endothelial.Notch-signaling':'black',
-        'Endothelial.Fatty_Acid':'olive',
-        'Endothelial.Collagen':'darkgreen',
-        
-        'CAF.Allograft_Rejection':'#7f4f24',
-        'CAF.CAF1':'#a68a64',
-        'CAF.CAF2':'#d6ccc2',
-        'CAF.CAF3':'#582f0e',
-        'CAF.Complement':'gray',
-        'CAF.Interferon':'salmon',
-        'CAF.KRAS_Signaling_up':'steelblue',
-        'CAF.Pericyte-like':'green',
-        'CAF.Stress':'black'
+        # 'Endothelial.Allograft_Rejection':'#7f4f24',
+        # 'Endothelial.Endo1':'#a68a64',
+        # 'Endothelial.Endo2':'#d6ccc2',
+        # 'Endothelial.Endo5':'#582f0e',
+        # 'Endothelial.HEV1':'salmon',
+        # 'Endothelial.Notch-signaling':'black',
+        # 'Endothelial.Fatty_Acid':'olive',
+        # 'Endothelial.Collagen':'darkgreen',
+
+    "CAF.Interferon": "tab:blue",
+    "CAF.MHCII": "tab:orange",
+    "CAF.Coagulation": "tab:green",
+    "CAF.Myo-TGFB": "tab:red",
+    "CAF.Lipid": "tab:purple",
+    "CAF.Pericyte-like": "tab:brown",
+    "CAF.Stress": "tab:pink",
+    "CAF.Myogenesis": "tab:gray",
+    "CAF.Fibrosis": "tab:olive"
+
+
+        # 'CAF.Allograft_Rejection':'#7f4f24',
+        # 'CAF.CAF1':'#a68a64',
+        # 'CAF.CAF2':'#d6ccc2',
+        # 'CAF.CAF3':'#582f0e',
+        # 'CAF.Complement':'gray',
+        # 'CAF.Interferon':'salmon',
+        # 'CAF.KRAS_Signaling_up':'steelblue',
+        # 'CAF.Pericyte-like':'green',
+        # 'CAF.Stress':'black'
     }
 }
 
